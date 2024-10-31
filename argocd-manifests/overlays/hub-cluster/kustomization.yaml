@@ -1,0 +1,6 @@
+resources:
+  - ../../base
+  - ./argoproj.io-AppProjects/appproject-demo.yaml
+  - ./user.openshift.io-Groups/group-acm-gitops-demo-openshift-group.yaml
+  - ./cluster.open-cluster-management.io-Placements/placement-default-cluster.yaml
+  - ./argoproj.io-ApplicationSet/applicationset-demo-application-set.yaml

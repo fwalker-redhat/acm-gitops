@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: demo-app-project
+  namespace: openshift-gitops
+spec:
+  clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'
+  destinations:
+    - name: '*'
+      namespace: '*'
+      server: '*'
+  namespaceResourceWhitelist:
+    - group: '*'
+      kind: '*'
+  sourceRepos:
+    - '*'
+  roles:
+    - description: Administrators of Demo Project and Applications
+      groups:
+        - acm-gitops-demo-openshift-group
+      name: demo-project-admins
+      policies:
+        - 'p, proj:test:demo-project-admins, applications, *, test/*, allow'
