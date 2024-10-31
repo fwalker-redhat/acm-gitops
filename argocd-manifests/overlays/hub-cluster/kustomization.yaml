@@ -1,6 +1,4 @@
 resources:
   - ./argoproj.io-AppProjects/appproject-demo.yaml
   - ./user.openshift.io-Groups/group-acm-gitops-demo-openshift-group.yaml
-  - ./cluster.open-cluster-management.io-Placements/placement-demo-application-set-placement.yaml
   - ./argoproj.io-ApplicationSet/applicationset-demo-application-set.yaml
-  - ./cluster.open-cluster-management.io-ManagedClusterSetBindings/managedclustersetbinding-default.yaml
