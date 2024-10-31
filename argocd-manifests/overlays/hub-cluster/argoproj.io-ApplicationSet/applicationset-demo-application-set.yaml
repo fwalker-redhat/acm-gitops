@@ -9,18 +9,18 @@ spec:
         configMapRef: acm-placement
         labelSelector:
           matchLabels:
-            cluster.open-cluster-management.io/placement: default-cluster
+            cluster.open-cluster-management.io/placement: demo-application-set-placement
         requeueAfterSeconds: 180
   template:
     metadata:
-      name: demo-application-{{name}}
+      name: demo-application-set-{{name}}
       labels:
         velero.io/exclude-from-backup: "true"
     spec:
       destination:
         namespace: demo-namespace
         server: "{{server}}"
-      project: demo-app-project
+      project: default
       sources:
         - path: ./
           repoURL: https://github.com/fwalker-redhat/gitops-demo.git
