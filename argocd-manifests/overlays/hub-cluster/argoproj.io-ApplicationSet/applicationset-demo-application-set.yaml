@@ -25,7 +25,6 @@ spec:
         - path: ./
           repoURL: https://github.com/fwalker-redhat/gitops-demo.git
           targetRevision: main
-          repositoryType: git
       syncPolicy:
         automated:
           prune: true
